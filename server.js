@@ -1,8 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-var mysql = require("mysql")
-var connection
 
 var app = express();
 var PORT = process.env.PORT || 8080;
@@ -18,16 +16,3 @@ app.listen(PORT, function() {
   console.log('Friend Finder app is listening on PORT: ' + PORT);
 });
 
-if (process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(preocess.env.JAWSDB_URL)
-} else {
-    connection = mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        password: "fallenpotato",
-        database: "theDatabase"
-    })
-}
-
-connection.connect()
-module.exports = connection
