@@ -25,7 +25,7 @@ if (process.env.JAWSDB_URL) {
         host: "localhost",
         user: "root",
         password: "fallenpotato",
-        database: "todoagain+_db"
+        database: "theDatabase"
     })
 }
 
